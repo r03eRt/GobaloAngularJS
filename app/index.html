@@ -2,7 +2,7 @@
 <html lang="en" ng-app="ngViewEffects">
 <head>
 	<meta charset="utf-8">
-	<title>ngView Animation Effects</title>
+	<title>Góbalo</title>
 	<link rel="stylesheet" href="css/bootstrap.min.css"/>
 	<link rel="stylesheet" href="lib/prism/themes/prism.css" />
 	<link rel="stylesheet" href="css/app.css"/>
@@ -20,12 +20,13 @@
 				<li ng-class="{active: isActive('/proyectos')}"><a href="#/proyectos">Proyectos</a></li>
 				<li ng-class="{active: isActive('/contacto')}"><a href="#/contacto">Contacto</a></li>
 			</ul>
-			<h3 class="text-muted">AngularJS ngView Animation Effects</h3>
+			<h3 class="text-muted">Góbalo</h3>
 		</div>
 
 		<div class="jumbotron content" >
 			<div ng-view ng-class="[effect, pageClass]" class="page"></div>
 		</div>
+		<div  id="world"></div>
 
 	</div>
 
@@ -34,6 +35,9 @@
 	<script src="lib/angular/angular-animate.min.js"></script>
 	<script src="lib/prism/prism.js"></script>
 	<script src="js/app.js"></script>
+	<script src="../bower_components/three.js/build/three.js"></script>
+	<script src="js/three.js"></script>
+	<!--<script src="js/main.js"></script>-->
 	<script src="js/controllers/indexController.js"></script>
 	<script src="js/controllers/pageController.js"></script>
 	<script src="js/controllers/aboutController.js"></script>
