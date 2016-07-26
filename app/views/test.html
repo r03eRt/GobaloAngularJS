@@ -1,0 +1,33 @@
+<div class="container-fluid" ng-controller="testController as testCtrl">
+    TEST
+
+
+    <div class="container">
+        <div class="row" class="bg"
+             ng-class="{red : circleCtrl.bg == 'red',
+         blue : circleCtrl.bg == 'blue',
+         green : circleCtrl.bg == 'green',
+         pink : circleCtrl.bg == 'pink'}" ng-controller="circleController as circleCtrl">
+            <div class="col-md-6 col-md-offset-3" ng-init="circleCtrl.initialState()">
+                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+             viewBox="0 0 77 74.3" style="enable-background:new 0 0 77 74.3;" xml:space="preserve">
+            <style type="text/css">
+                .st0{display:none;fill:#F96B2D;}
+                .st1{fill:none;stroke:#EEEEEE;stroke-miterlimit:10;}
+                .st2{fill:none;stroke:#070707;stroke-miterlimit:10;}
+            </style>
+            <rect id="bg" x="-14.1" y="-13.8" class="st0" width="107.9" height="102.5"/>
+            <circle id="trazado_vacio" class="st1" cx="38.5" cy="37.2" r="34.4"/>
+            <circle id="trazado" class="st2" cx="38.5" cy="37.2" r="34.4"/>
+            </svg>
+            </div>
+            <button ng-click="circleCtrl.animate(0,'red')">Animate 0%</button>
+            <button ng-click="circleCtrl.animate(25,'red')">Animate 25%</button>
+            <button ng-click="circleCtrl.animate(50,'blue')">Animate 50%</button>
+            <button ng-click="circleCtrl.animate(75,'green')">Animate 75%</button>
+            <button ng-click="circleCtrl.animate(100,'pink')">Animate 100%</button>
+
+        </div>
+    </div>
+
+</div>

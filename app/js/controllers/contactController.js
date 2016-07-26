@@ -23,8 +23,10 @@
                     self.message = data.message;
                 }
             }).error(function(){
+                self.message = "Something happened, please try again";
             });
         }
     }]);
+
 
 }());

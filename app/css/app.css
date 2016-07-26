@@ -538,3 +538,48 @@ body {
 .addthis_toolbox .addthis_counter {
 	width: 32px !important;
 }
+
+
+.bg{
+	-webkit-transition: background .5s linear;
+	-moz-transition: background .5s linear;
+	-ms-transition: background .5s linear;
+	-o-transition: background .5s linear;
+	transition: background .5s linear;
+}
+
+.red{
+	background-color: lightcoral;
+	-webkit-transition: background .5s linear;
+	-moz-transition: background .5s linear;
+	-ms-transition: background .5s linear;
+	-o-transition: background .5s linear;
+	transition: background .5s linear;
+}
+
+.blue{
+	background-color: lightblue;
+	-webkit-transition: background .5s linear;
+	-moz-transition: background .5s linear;
+	-ms-transition: background .5s linear;
+	-o-transition: background .5s linear;
+	transition: background .5s linear;
+}
+
+.green{
+	background-color: lightgreen;
+	-webkit-transition: background .5s linear;
+	-moz-transition: background .5s linear;
+	-ms-transition: background .5s linear;
+	-o-transition: background .5s linear;
+	transition: background .5s linear;
+}
+
+.pink{
+	background-color: lightpink;
+	-webkit-transition: background .5s linear;
+	-moz-transition: background .5s linear;
+	-ms-transition: background .5s linear;
+	-o-transition: background .5s linear;
+	transition: background .5s linear;
+}
