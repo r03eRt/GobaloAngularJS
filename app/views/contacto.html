@@ -1,30 +1,34 @@
-<div class="container-fluid" ng-controller="contactController as contactCtrl">
-    CONTACTO
-    <br>
-    <div class="row">
-        <div class="col-sm-6 col-sm-offset-3">
-            <div class="page-header"><h3>Formulario de contacto (http://www.gobalo.es/test.php)</h3></div>
-            <!-- FORM -->
-            <form name="userForm" ng-submit="contactCtrl.submitForm()">
-                <div class="form-group">
-                    <label>Name</label>
-                    <input type="text" name="name" class="form-control" ng-model="contactCtrl.user.name">
-                    <span ng-show="contactCtrl.errorName">{{contactCtrl.errorName}}</span>
-                </div>
-                <div class="form-group">
-                    <label>Username</label>
-                    <input type="text" name="username" class="form-control" ng-model="contactCtrl.user.username">
-                    <span ng-show="contactCtrl.errorUserName">{{contactCtrl.errorUserName}}</span>
-                </div>
-                <div class="form-group">
-                    <label>Email</label>
-                    <input type="email" name="email" class="form-control" ng-model="contactCtrl.user.email">
-                    <span ng-show="contactCtrl.errorEmail">{{contactCtrl.errorEmail}}</span>
-                </div>
-                {{ contactCtrl.message }}
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
+<div class="container-fluid" ng-controller="contactController as contactCtrl" >
+    <div class="intro" >
+        <h1 class="titular">CONTACTO</h1>
+    </div>
+    <div class="contenido white">
+        <div class="row">
+            <div class="col-sm-6 col-sm-offset-3">
+                <div class="page-header"><h3>Formulario de contacto (http://www.gobalo.es/test.php)</h3></div>
+                <!-- FORM -->
+                <form name="userForm" ng-submit="contactCtrl.submitForm()">
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text" name="name" class="form-control" ng-model="contactCtrl.user.name">
+                        <span ng-show="contactCtrl.errorName">{{contactCtrl.errorName}}</span>
+                    </div>
+                    <div class="form-group">
+                        <label>Username</label>
+                        <input type="text" name="username" class="form-control" ng-model="contactCtrl.user.username">
+                        <span ng-show="contactCtrl.errorUserName">{{contactCtrl.errorUserName}}</span>
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" name="email" class="form-control" ng-model="contactCtrl.user.email">
+                        <span ng-show="contactCtrl.errorEmail">{{contactCtrl.errorEmail}}</span>
+                    </div>
+                    {{ contactCtrl.message }}
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
         </div>
     </div>
-
 </div>
+
+<div ng-include="'views/footer.html'"></div>

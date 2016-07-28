@@ -3,15 +3,21 @@
 <head>
 	<meta charset="utf-8">
 	<title>Góbalo</title>
+	<!-- Bootstrap css-->
 	<link rel="stylesheet" href="css/bootstrap.min.css"/>
 	<link rel="stylesheet" href="lib/prism/themes/prism.css" />
+	<!-- Default css-->
 	<link rel="stylesheet" href="css/app.css"/>
+	<!-- Main css-->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" media='screen and (max-width: 1200px)' href='css/style_med2.css' />
+	<link rel="stylesheet" media='screen and (max-width: 900px)' href='css/style_med.css ' />
+	<link rel="stylesheet" media='screen and (max-width: 700px)' href='css/style_min.css ' />
 </head>
 <body>
 
-
-	<div class="container-fuild" ng-controller="indexController">
-
+	<!-- full width div -->
+	<div class="container-fluid" ng-controller="indexController">
 		<div class="header">
 			<ul class="nav nav-pills pull-right">
 				<!--<li ng-class="{active: isActive('/page/:pageId')}"><a href="#/page/1">Inicio</a></li>-->
@@ -20,17 +26,24 @@
 				<li ng-class="{active: isActive('/proyectos')}"><a href="#/proyectos">Proyectos</a></li>
 				<li ng-class="{active: isActive('/contacto')}"><a href="#/contacto">Contacto</a></li>
 				<!--<li ng-class="{active: isActive('/test')}"><a href="#/test">Test</a></li>-->
-
 			</ul>
 			<h3 class="text-muted">Góbalo</h3>
 		</div>
 
-		<div class="jumbotron content" >
+
+		<!--main container-->
+		<div class="container-fluid content" >
 			<!-- ng-class="[effect, pageClass]" -->
-			<div ng-view  class="page slide"></div>
+			<div ng-view  class="page fade"></div>
 		</div>
+		<!-- end main container -->
 
 	</div>
+	<!-- end full width div -->
+
+
+
+
 	<script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
 	<script src="http://letsgoluce.com/assets/js/libs/gs/plugins/DrawSVGPlugin.min.js"></script>

@@ -1,0 +1,104 @@
+/* ==========================================================================
+   HEADER
+   ========================================================================== */
+
+.intro{
+    text-align: center;
+    height: 365px;
+}
+
+.intro-index{
+    text-align: center;
+    height: 625px;
+}
+
+
+.contenido{
+    height: 100vh;
+}
+
+.titular{
+    margin-top: 0;
+}
+
+/* ==========================================================================
+   NAVBAR
+   ========================================================================== */
+
+.nav-pills>li>a{
+    color:#ffffff;
+}
+
+
+/* ==========================================================================
+   CONTENT
+   ========================================================================== */
+
+
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+
+footer{
+    color:#ffffff;
+    background: #292b2a;
+    height: 230px;
+}
+
+/* ==========================================================================
+   HELPER CLASSES
+   ========================================================================== */
+
+.bg{
+    -webkit-transition: background .5s linear;
+    -moz-transition: background .5s linear;
+    -ms-transition: background .5s linear;
+    -o-transition: background .5s linear;
+    transition: background .5s linear;
+}
+
+.red{
+    background-color: lightcoral;
+    -webkit-transition: background .5s linear;
+    -moz-transition: background .5s linear;
+    -ms-transition: background .5s linear;
+    -o-transition: background .5s linear;
+    transition: background .5s linear;
+}
+
+.blue{
+    background-color: lightblue;
+    -webkit-transition: background .5s linear;
+    -moz-transition: background .5s linear;
+    -ms-transition: background .5s linear;
+    -o-transition: background .5s linear;
+    transition: background .5s linear;
+}
+
+.green{
+    background-color: lightgreen;
+    -webkit-transition: background .5s linear;
+    -moz-transition: background .5s linear;
+    -ms-transition: background .5s linear;
+    -o-transition: background .5s linear;
+    transition: background .5s linear;
+}
+
+.pink{
+    background-color: lightpink;
+    -webkit-transition: background .5s linear;
+    -moz-transition: background .5s linear;
+    -ms-transition: background .5s linear;
+    -o-transition: background .5s linear;
+    transition: background .5s linear;
+}
+
+.white{
+    background-color: white;
+    -webkit-transition: background .5s linear;
+    -moz-transition: background .5s linear;
+    -ms-transition: background .5s linear;
+    -o-transition: background .5s linear;
+    transition: background .5s linear;
+}

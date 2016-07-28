@@ -1,8 +1,9 @@
 /* Space out content a bit */
 body {
-	padding-top: 20px;
-	padding-bottom: 20px;
-	overflow: hidden;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	overflow-x: hidden;
+	background: url(../img/bg_cruz.png);
 }
 
 /* Redefining bootstrap styles */
@@ -27,13 +28,14 @@ body {
 /* Custom page header */
 .header {
 	border-bottom: 1px solid #e5e5e5;
+	height: 75px;
+
 }
 /* Make the masthead heading the same height as the navigation */
 .header h3 {
 	margin-top: 0;
 	margin-bottom: 0;
 	line-height: 40px;
-	padding-bottom: 19px;
 }
 
 /* Custom page footer */
@@ -83,7 +85,8 @@ body {
 	}
   	/* Space out the masthead */
 	.header {
-		margin-bottom: 30px;
+		margin-bottom: 0px;
+
 	}
   	/* Remove the bottom border on the jumbotron for visual effect */
 	.jumbotron {
@@ -95,7 +98,7 @@ body {
 /* Pages styles */
 .content .page {
 	position: absolute;
-	padding: 30px;
+	padding: 0px;
 	background: #CBE0CF;
 	text-align: left;
 	width: 100%;
@@ -539,48 +542,4 @@ body {
 	width: 32px !important;
 }
 
-
-.bg{
-	-webkit-transition: background .5s linear;
-	-moz-transition: background .5s linear;
-	-ms-transition: background .5s linear;
-	-o-transition: background .5s linear;
-	transition: background .5s linear;
-}
-
-.red{
-	background-color: lightcoral;
-	-webkit-transition: background .5s linear;
-	-moz-transition: background .5s linear;
-	-ms-transition: background .5s linear;
-	-o-transition: background .5s linear;
-	transition: background .5s linear;
-}
-
-.blue{
-	background-color: lightblue;
-	-webkit-transition: background .5s linear;
-	-moz-transition: background .5s linear;
-	-ms-transition: background .5s linear;
-	-o-transition: background .5s linear;
-	transition: background .5s linear;
-}
-
-.green{
-	background-color: lightgreen;
-	-webkit-transition: background .5s linear;
-	-moz-transition: background .5s linear;
-	-ms-transition: background .5s linear;
-	-o-transition: background .5s linear;
-	transition: background .5s linear;
-}
-
-.pink{
-	background-color: lightpink;
-	-webkit-transition: background .5s linear;
-	-moz-transition: background .5s linear;
-	-ms-transition: background .5s linear;
-	-o-transition: background .5s linear;
-	transition: background .5s linear;
-}
 
