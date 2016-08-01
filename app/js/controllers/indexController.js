@@ -1,4 +1,4 @@
-app.controller('indexController', ['$scope', '$route', function($scope, $route) {
+app.controller('indexController', ['$scope', '$route', '$translate', function($scope, $route, $translate) {
 
 	// All effects list
     $scope.effects = [
@@ -20,6 +20,10 @@ app.controller('indexController', ['$scope', '$route', function($scope, $route) 
 			return $route.current.regexp.test(path);
 		}
 		return false;
+	};
+
+	$scope.changeLanguage = function (langKey) {
+		$translate.use(langKey);
 	};
 
 	
