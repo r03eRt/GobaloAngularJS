@@ -1,6 +1,7 @@
 var app = angular.module('ngViewEffects', [
 	'ngRoute',
-	'ngAnimate'
+	'ngAnimate',
+    'pascalprecht.translate'
 ]);
 
 app.config(function($routeProvider) {
@@ -46,3 +47,29 @@ app.config(function($routeProvider) {
         	redirectTo: '/page/1'
         });*/
 });
+
+
+var translations_es = {
+    HEADLINE: 'INICIO',
+    PARAGRAPH: "Contenido de inicio<strong>hola amigo</strong>!!",
+    NAMESPACE: {
+        PARAGRAPH: 'And it comes with awesome features!'
+    }
+};
+
+var translations_en = {
+    HEADLINE: 'INDEX',
+    PARAGRAPH: "Index content<strong>Hi my friend</strong>!",
+    NAMESPACE: {
+        PARAGRAPH: 'And it comes with awesome features!'
+    }
+};
+
+
+
+app.config(['$translateProvider', function ($translateProvider) {
+    // add translation table
+    $translateProvider.translations('en', translations_en);
+    $translateProvider.translations('es', translations_es);
+    $translateProvider.preferredLanguage('en');
+}]);
