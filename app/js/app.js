@@ -75,15 +75,27 @@ var translations_es = {
     // INICIO
     INICIO:{
         TITULAR: 'Inicio',
-        INTRO: 'Contenido español!',
+        INTRO: 'Inicio Contenido!',
         PARRAFO1: 'Parrafo español'
     },
-    // AGENCIA
+    //AGENCIA
     AGENCIA:{
         TITULAR: 'Agencia',
-        INTRO: 'Contenido español!',
-        PARRAFO1: 'PArrafo español'
-    }
+        INTRO: 'Agencia Contenido',
+        PARRAFO1: 'Agencia Parrafo español'
+    },
+    //PROYECTOS
+    PROYECTOS:{
+        TITULAR: 'Proyectos',
+        INTRO: 'Proyectos Contenido',
+        PARRAFO1: 'Proyectos Parrafo español'
+    },
+    //CONTACTO
+    CONTACTO:{
+        TITULAR: 'Contacto',
+        INTRO: 'Contacto Contenido',
+        PARRAFO1: 'Contacto Parrafo español'
+    },
 
 };
 
@@ -97,14 +109,26 @@ var translations_en = {
     //INICIO
     INICIO:{
         TITULAR: 'Index',
-        INTRO: 'English content!',
-        PARRAFO1: 'English paragraph'
+        INTRO: 'Index English content!',
+        PARRAFO1: 'Index English paragraph'
     },
     //AGENCIA
     AGENCIA:{
         TITULAR: 'Agency',
-        INTRO: 'English content!',
-        PARRAFO1: 'English paragraph'
-    }
+        INTRO: 'Agency English content!',
+        PARRAFO1: 'Agency English paragraph'
+    },
+    //PROYECTOS
+    PROYECTOS:{
+        TITULAR: 'Projects',
+        INTRO: 'Projects English content!',
+        PARRAFO1: 'Projects English paragraph'
+    },
+    //CONTACTO
+    CONTACTO:{
+        TITULAR: 'Contact',
+        INTRO: 'Contact English content!',
+        PARRAFO1: 'Contact English paragraph'
+    },
 
 };
