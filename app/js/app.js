@@ -4,6 +4,8 @@ var app = angular.module('ngViewEffects', [
     'pascalprecht.translate'
 ]);
 
+
+
 app.config(function($routeProvider) {
     $routeProvider
         .when('/page/:pageId', {
@@ -58,7 +60,10 @@ app.config(['$translateProvider', function ($translateProvider) {
     // add translation table
     $translateProvider.translations('en', translations_en);
     $translateProvider.translations('es', translations_es);
+
     $translateProvider.preferredLanguage('es');
+
+
 }]);
 
 

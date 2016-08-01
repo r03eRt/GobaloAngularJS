@@ -12,6 +12,8 @@ app.controller('indexController', ['$scope', '$route', '$translate', function($s
 		{name: 'Slide + Pop in', className: 'slide-pop'}
     ];
 
+	
+
 	$scope.effect = $scope.effects[0].className;
 
 	// Current menu item
