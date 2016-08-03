@@ -38,13 +38,13 @@ app.controller('indexController', ['$scope', '$route', '$translate', function($s
 			function stopAnimate(){
 				$('body').removeClass('animating')
 			}
-		}else{
-			console.log('animando');
 		}
-
-
-
 	}
+
+	// Controlador vista cargada
+	$scope.$on('$viewContentLoaded', function(){
+		console.log(' is loaded !!');
+	});
 	
 }]);
 

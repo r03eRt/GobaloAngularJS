@@ -14,7 +14,7 @@
 
 
 .contenido{
-    height: 100vh;
+    min-height: 1080px;
 }
 
 .titular{
