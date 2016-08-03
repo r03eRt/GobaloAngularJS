@@ -1,6 +1,8 @@
 <pre class="pre pre-html language-markup" nag-prism><code>&lt;div ng-view class="fade"&gt;&lt;/div&gt;</code></pre>
 
-<pre class="pre pre-css language-css" nag-prism><code>.fade {
+<pre class="pre pre-css language-css" nag-prism><code>
+
+.fade {
     position: absolute;
     top: 0;
     left: 0;
@@ -10,8 +12,9 @@
 }
 .fade.ng-enter,
 .fade.ng-leave {
-    -webkit-transition: all 1s ease;
-    transition: all 1s ease;
+    -webkit-transition: all 10s ease;
+    transition: all 10s ease;
+
 }
 .fade.ng-enter {
     opacity: 0;

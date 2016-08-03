@@ -15,16 +15,17 @@
 	<link rel="stylesheet" media='screen and (max-width: 700px)' href='css/style_min.css ' />
 </head>
 <body>
+<div class="layer" ></div>
 
 	<!-- full width div -->
 	<div class="container-fluid" ng-controller="indexController">
 		<div class="header">
 			<ul class="nav nav-pills pull-right">
 				<!--<li ng-class="{active: isActive('/page/:pageId')}"><a href="#/page/1">Inicio</a></li>-->
-                <li ng-class="{active: isActive('/inicio')}"><a href="#/">Inicio</a></li>
-				<li ng-class="{active: isActive('/agencia')}"><a href="#/agencia">Agencia</a></li>
-				<li ng-class="{active: isActive('/proyectos')}"><a href="#/proyectos">Proyectos</a></li>
-				<li ng-class="{active: isActive('/contacto')}"><a href="#/contacto">Contacto</a></li>
+                <li ng-click="animate()" ng-class="{active: isActive('/inicio')}"><a href="#/">Inicio</a></li>
+				<li ng-click="animate()" ng-class="{active: isActive('/agencia')}"><a href="#/agencia">Agencia</a></li>
+				<li ng-click="animate()" ng-class="{active: isActive('/proyectos')}"><a href="#/proyectos">Proyectos</a></li>
+				<li ng-click="animate()" ng-class="{active: isActive('/contacto')}"><a href="#/contacto">Contacto</a></li>
 				<!--<li ng-class="{active: isActive('/test')}"><a href="#/test">Test</a></li>-->
 			</ul>
 			<h3 class="text-muted">Góbalo</h3>
@@ -74,6 +75,7 @@
     <script src="js/controllers/contactController.js"></script>
 	<script src="js/controllers/testController.js"></script>
     <script src="js/controllers/projectsController.js"></script>
+	<script src="js/controllers/projectsInnerController.js"></script>
 	<script src="js/controllers/footerController.js"></script>
 	<script src="js/directives/backAnimation.js"></script>
 	<script src="js/directives/prism.js"></script>

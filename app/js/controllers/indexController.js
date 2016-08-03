@@ -12,8 +12,6 @@ app.controller('indexController', ['$scope', '$route', '$translate', function($s
 		{name: 'Slide + Pop in', className: 'slide-pop'}
     ];
 
-	
-
 	$scope.effect = $scope.effects[0].className;
 
 	// Current menu item
@@ -28,6 +26,25 @@ app.controller('indexController', ['$scope', '$route', '$translate', function($s
 		$translate.use(langKey);
 	};
 
+	$scope.animate = function() {
+		$body = $('body');
+		if(!$body.hasClass('animating')){
+			$body.addClass('animating');
+			var $layer = $('.layer');
+			var tween = TweenLite.to($layer, .5, {xPercent: '100%', ease: Power4.easeInOut});
+			var tween = TweenLite.to($layer, 2, {xPercent: '200%', ease: Power4.easeInOut, onComplete: stopAnimate});
+			TweenLite.set($layer, {xPercent: '-100%'});
+
+			function stopAnimate(){
+				$('body').removeClass('animating')
+			}
+		}else{
+			console.log('animando');
+		}
+
+
+
+	}
 	
 }]);
 

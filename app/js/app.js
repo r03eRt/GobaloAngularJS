@@ -34,6 +34,54 @@ app.config(function($routeProvider) {
             templateUrl: 'views/proyectos.html',
             controller:  'projectsController'
         })
+        .when('/proyectos/google-ocu', {
+            templateUrl: 'views/proyecto-google-ocu.html',
+            controller:  'projectsInnerController'
+        })
+        .when('/proyectos/universidad-nebrija', {
+            templateUrl: 'views/proyecto-universidad-nebrija.html',
+            controller:  'projectsInnerController'
+        })
+        .when('/proyectos/altamira', {
+            templateUrl: 'views/proyecto-altamira.html',
+            controller:  'projectsInnerController'
+        })
+        .when('/proyectos/el-quinto-de-don-pedro', {
+            templateUrl: 'views/proyecto-el-quinto-de-don-pedro.html',
+            controller:  'projectsInnerController'
+        })
+        .when('/proyectos/movistar-cloud', {
+            templateUrl: 'views/proyecto-movistar-cloud.html',
+            controller:  'projectsInnerController'
+        })
+        .when('/proyectos/hitachi-holyshot', {
+            templateUrl: 'views/proyecto-hitachi-holyshot.html',
+            controller:  'projectsInnerController'
+        })
+        .when('/proyectos/hotel-vinas-de-larrede', {
+            templateUrl: 'views/proyecto-hotel-vinas-de-larrede.html',
+            controller:  'projectsInnerController'
+        })
+        .when('/proyectos/google-activa-tu-ciudad', {
+            templateUrl: 'views/proyecto-google-activa-tu-ciudad.html',
+            controller:  'projectsInnerController'
+        })
+        .when('/proyectos/nekicesa', {
+            templateUrl: 'views/proyecto-nekicesa.html',
+            controller:  'projectsInnerController'
+        })
+        .when('/proyectos/fundacion-real-madrid', {
+            templateUrl: 'views/proyecto-fundacion-real-madrid.html',
+            controller:  'projectsInnerController'
+        })
+        .when('/proyectos/kommerling-portugal', {
+            templateUrl: 'views/proyecto-kommerling-portugal.html',
+            controller:  'projectsInnerController'
+        })
+        .when('/proyectos/google-activate', {
+            templateUrl: 'views/proyecto-google-activate.html',
+            controller:  'projectsInnerController'
+        })
         .when('/', {
             templateUrl: 'views/inicio.html',
             controller:  'indexController'

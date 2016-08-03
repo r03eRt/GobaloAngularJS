@@ -1,20 +1,4 @@
 <footer class="col-md-12" ng-controller="footerController as footerCtrl">
-footera
+footer
 
-    <ul>
-        <!-- A view with big photos and no text -->
-        <li ng-repeat="p in pics">
-            <a href="{{p.link}}" target="_blank"><img ng-src="{{p.images.low_resolution.url}}" /></a>
-        </li>
-    </ul>
-
-
-
-    <div class="col-md-12" ng-controller="ShowImages as images">
-
-            <div class="col-md-2" ng-repeat="p in pics" style="background:url({{p.images.low_resolution.url}});height:200px" >
-                <a href="{{p.link}}" target="_blank"></a>
-            </div>
-
-    </div>
 </footer>

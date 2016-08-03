@@ -350,8 +350,11 @@ body {
 }
 .content .page.fade.ng-enter,
 .content .page.fade.ng-leave {
-    -webkit-transition: all 1s ease;
-    transition: all 1s ease;
+    -webkit-transition: all 0.1s ease;
+    transition: all 0.1s ease;
+	-webkit-transition-delay:1s ;
+	transition-delay: 1s ;
+
 }
 .content .page.fade.ng-enter {
     opacity: 0;
