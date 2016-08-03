@@ -41,6 +41,8 @@ app.controller('indexController', ['$scope', '$route', '$translate', function($s
 		}
 	}
 
+	
+
 	// Controlador vista cargada
 	$scope.$on('$viewContentLoaded', function(){
 		console.log(' is loaded !!');

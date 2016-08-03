@@ -4,9 +4,9 @@ var app = angular.module('ngViewEffects', [
     'pascalprecht.translate'
 ]);
 
-
-
 app.config(function($routeProvider) {
+    new WOW().init();
+    
     $routeProvider
         .when('/page/:pageId', {
             controller: 'pageController',
@@ -113,7 +113,6 @@ app.config(['$translateProvider', function ($translateProvider) {
 
 
 }]);
-
 
 
 //TRADUCCIONES
