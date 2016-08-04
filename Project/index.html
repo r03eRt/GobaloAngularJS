@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es" ng-app="GobaloApp">
+
+  <head>
+    <meta charset="utf-8" />
+    <title>AngularJS Gobalo</title>
+    
+    <!--<script>document.write('<base href="' + document.location + '" />');</script>-->
+
+      <link rel="stylesheet" href="css/libs/bootstrap.min.css"/>
+      <!-- Default css-->
+      <link rel="stylesheet" href="css/app.css"/>
+      <!-- Main css-->
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+      <link rel="stylesheet" media='screen and (max-width: 1200px)' href='css/style_med2.css' />
+      <link rel="stylesheet" media='screen and (max-width: 900px)' href='css/style_med.css ' />
+      <link rel="stylesheet" media='screen and (max-width: 700px)' href='css/style_min.css ' />
+  </head>
+
+  <body ng-controller="MainCtrl">
+    <h1>App</h1>
+    <a href="#/">Page 1</a> | <a href="#/page2">Page 2</a> | <a href="#/page3">Page 3</a>
+
+
+
+    <select ng-change="update(language)" ng-model="language" ng-options="lang for lang in languages">
+        <option value="">-- language --</option>
+    </select>
+
+    <h3>{{ 'title' | translate }}</h3>
+    <h4>{{ 'description.text'  | translate }}</h4>
+    <p>{{ 'button' | translate }}</p>
+
+    <p ng-translate="'message'"></p>
+    <p ng-translate="es('message')"></p>
+
+    <table style="border:1px solid red">
+        <tr>
+            <td>User Details:</td>
+        </tr>
+        <tr>
+            <td>{{ 'message' | translate: this }}</td>
+        </tr>
+        <tr>
+            Change user details:
+        </tr>
+        <tr>
+            <td>name: <input ng-model="user.name" type="text"/> </td>
+        </tr>
+        <tr>
+            <td>password: <input ng-model="user.password" type="text"/> </td>
+        </tr>
+    </table>
+
+
+
+
+    
+    <main id="main"><div class="pages" ng-view stage></div></main>
+
+    <script src="./js/libs/greensock/TweenMax.min.js"></script>
+
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-animate.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-resource.min.js"></script>
+    <script src="./js/libs/ng-translation-master/dist/ng-translation.min.js"></script>
+    <script src="./js/app.js"></script>
+    <script src="./js/directives/directives.js"></script>
+    <script src="./js/controllers/mainController.js"></script>
+    <script src="./js/controllers/page1Controller.js"></script>
+    <script src="./js/controllers/page2Controller.js"></script>
+    <script src="./js/controllers/page3Controller.js"></script>
+
+    <script>angular.element(document.getElementsByTagName('head')).append(angular.element('<base href="' + window.location.pathname + '" />'));</script>
+  </body>
+
+</html>

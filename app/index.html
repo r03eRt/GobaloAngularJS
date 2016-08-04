@@ -31,8 +31,39 @@
 			</ul>
 			<h3 class="text-muted">Góbalo</h3>
 
-			<button ng-click="changeLanguage('es')" translate="GENERAL.BUTTON_LANG_ES"></button>
-			<button ng-click="changeLanguage('en')" translate="GENERAL.BUTTON_LANG_EN"></button>
+			<select ng-change="update(language)" ng-model="language" ng-options="lang for lang in languages">
+				<option value="">-- language --</option>
+			</select>
+
+			<h3>{{ 'title' | translate }}</h3>
+			<h4>{{ 'description.text'  | translate }}</h4>
+			<p>{{ 'button' | translate }}</p>
+
+			<p ng-translate="'message'"></p>
+			<p ng-translate="es('message')"></p>
+
+			<table style="border:1px solid red">
+				<tr>
+					<td>User Details:</td>
+				</tr>
+				<tr>
+					<td>{{ 'message' | translate: this }}</td>
+				</tr>
+				<tr>
+					Change user details:
+				</tr>
+				<tr>
+					<td>name: <input ng-model="user.name" type="text"/> </td>
+				</tr>
+				<tr>
+					<td>password: <input ng-model="user.password" type="text"/> </td>
+				</tr>
+			</table>
+
+
+
+
+
 
 		</div>
 
@@ -54,13 +85,13 @@
 	<script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
 	<script src="http://letsgoluce.com/assets/js/libs/gs/plugins/DrawSVGPlugin.min.js"></script>
-	<script src="lib/angular/angular.js"></script>
-	<script src="lib/angular/angular-route.min.js"></script>
-	<script src="lib/angular/angular-animate.min.js"></script>
-	<script src="lib/angular/angular-instagram-api-factory.js"></script>
+	<script src="../Project/js/libs/angular/angular.js"></script>
+	<script src="../Project/js/libs/angular/angular-route.min.js"></script>
+	<script src="../Project/js/libs/angular/angular-animate.min.js"></script>
+	<script src="../Project/js/libs/angular/angular-instagram-api-factory.js"></script>
 	<script src="lib/prism/prism.js"></script>
-	<script src="lib/angular/angular-translate.min.js"></script>
-	<script src="lib/angular/tmhDynamicLocale.js"></script>
+	<!--<script src="../Project/js/libs/angular/angular-translate.min.js"></script>
+	<script src="../Project/js/libs/angular/tmhDynamicLocale.js"></script>-->
 	<script src="lib/wowjs/wow.js"></script>
 	<script src="js/app.js"></script>
 	<script src="../bower_components/three.js/build/three.js"></script>
