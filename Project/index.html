@@ -21,42 +21,16 @@
     <h1>App</h1>
     <a href="#/">Page 1</a> | <a href="#/page2">Page 2</a> | <a href="#/page3">Page 3</a>
 
-
-
     <select ng-change="update(language)" ng-model="language" ng-options="lang for lang in languages">
         <option value="">-- language --</option>
     </select>
 
-    <h3>{{ 'title' | translate }}</h3>
-    <h4>{{ 'description.text'  | translate }}</h4>
-    <p>{{ 'button' | translate }}</p>
-
-    <p ng-translate="'message'"></p>
-    <p ng-translate="es('message')"></p>
-
-    <table style="border:1px solid red">
-        <tr>
-            <td>User Details:</td>
-        </tr>
-        <tr>
-            <td>{{ 'message' | translate: this }}</td>
-        </tr>
-        <tr>
-            Change user details:
-        </tr>
-        <tr>
-            <td>name: <input ng-model="user.name" type="text"/> </td>
-        </tr>
-        <tr>
-            <td>password: <input ng-model="user.password" type="text"/> </td>
-        </tr>
-    </table>
-
-
-
-
     
     <main id="main"><div class="pages" ng-view stage></div></main>
+
+    <footer>
+        hoaasda
+    </footer>
 
     <script src="./js/libs/greensock/TweenMax.min.js"></script>
 

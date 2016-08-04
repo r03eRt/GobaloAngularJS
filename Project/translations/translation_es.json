@@ -1,8 +1,0 @@
-{
-  "title": "Bienvenido",
-  "description": {
-    "text": "texto intro"
-  },
-  "button": "Click",
-  "message": "Hola {{user.name}}, Uw wachtwoord is: {{user.password}}"
-}

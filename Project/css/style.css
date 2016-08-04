@@ -104,7 +104,7 @@ footer{
 }
 
 .white{
-    background-color: white;
+    background-color: white!important;
     -webkit-transition: background .5s linear;
     -moz-transition: background .5s linear;
     -ms-transition: background .5s linear;

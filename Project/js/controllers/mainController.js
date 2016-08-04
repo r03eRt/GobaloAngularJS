@@ -7,14 +7,12 @@ app.controller('MainCtrl',['$scope', '$rootScope','$timeout', 'ngTranslation', f
     }, 0);
 
     $scope.languages = ['en', 'de', 'es'];
-    $scope.user = {
-        name: 'Default UserName',
-        password: '90_xsB@4{s'
-    };
 
     $scope.update = function(language) {
         $ngTranslation.use(language);
+        console.log("traduzco a "+language);
     };
+
 
 
 }]);
