@@ -138,3 +138,12 @@ footer{
 #page3 {
     background: blue;
 }
+
+header{
+    background: red;
+    height: 440px;
+}
+
+.overflow-hidden{
+    overflow: hidden;
+}

@@ -2,5 +2,8 @@
   "title": "Titulo en DE",
   "description": {
     "text": "Tentro desripcion en DE"
+  },
+  "footer":{
+    "text":"footer en de"
   }
 }

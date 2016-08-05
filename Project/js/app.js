@@ -66,6 +66,31 @@ app.config(['$locationProvider', '$routeProvider', function ($locationProvider, 
       templateUrl: 'views/page3.html',
       resolve: resolve
     })
+    .when('/contacto', {
+      controller: 'ContactoCtrl',
+      templateUrl: 'views/contacto.html',
+      resolve: resolve
+    })
+    .when('/proyectos', {
+      controller: 'ProyectosCtrl',
+      templateUrl: 'views/proyectos.html',
+      resolve: resolve
+    })
+    .when('/inicio', {
+      controller: 'InicioCtrl',
+      templateUrl: 'views/inicio.html',
+      resolve: resolve
+    })
+    .when('/talento', {
+      controller: 'TalentoCtrl',
+      templateUrl: 'views/talento.html',
+      resolve: resolve
+    })
+    .when('/agencia', {
+      controller: 'AgenciaCtrl',
+      templateUrl: 'views/agencia.html',
+      resolve: resolve
+    })
     .otherwise({
       redirectTo: '/'
     });

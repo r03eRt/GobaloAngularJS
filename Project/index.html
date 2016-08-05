@@ -18,18 +18,30 @@
   </head>
 
   <body ng-controller="MainCtrl">
-    <h1>App</h1>
-    <a href="#/">Page 1</a> | <a href="#/page2">Page 2</a> | <a href="#/page3">Page 3</a>
+
+  <header>
+    <p>App</p>
+    <a href="#/">Page 1</a> |
+    <a href="#/page2">Page 2</a> |
+    <a href="#/page3">Page 3</a> |
+    <a href="#/inicio">Inicio</a> |
+    <a href="#/proyectos">Proyectos</a> |
+    <a href="#/talento">Talento</a> |
+    <a href="#/agencia">Agencia</a> |
+    <a href="#/contacto">Contacto</a>
 
     <select ng-change="update(language)" ng-model="language" ng-options="lang for lang in languages">
-        <option value="">-- language --</option>
+      <option value="">-- language --</option>
     </select>
+  </header>
 
     
-    <main id="main"><div class="pages" ng-view stage></div></main>
+    <main id="main">
+        <div class="pages" ng-view stage></div>
+    </main>
 
     <footer>
-        hoaasda
+        {{ 'footer.text'  | translate }}
     </footer>
 
     <script src="./js/libs/greensock/TweenMax.min.js"></script>
@@ -45,6 +57,11 @@
     <script src="./js/controllers/page1Controller.js"></script>
     <script src="./js/controllers/page2Controller.js"></script>
     <script src="./js/controllers/page3Controller.js"></script>
+    <script src="./js/controllers/inicioController.js"></script>
+    <script src="./js/controllers/contactoController.js"></script>
+    <script src="./js/controllers/proyectosController.js"></script>
+    <script src="./js/controllers/talentoController.js"></script>
+    <script src="./js/controllers/agenciaController.js"></script>
 
     <script>angular.element(document.getElementsByTagName('head')).append(angular.element('<base href="' + window.location.pathname + '" />'));</script>
   </body>
