@@ -20,19 +20,23 @@
   <body ng-controller="MainCtrl">
 
   <header>
-    <p>App</p>
-    <a href="#/">Page 1</a> |
-    <a href="#/page2">Page 2</a> |
-    <a href="#/page3">Page 3</a> |
-    <a href="#/inicio">Inicio</a> |
-    <a href="#/proyectos">Proyectos</a> |
-    <a href="#/talento">Talento</a> |
-    <a href="#/agencia">Agencia</a> |
-    <a href="#/contacto">Contacto</a>
+    <nav>
+        <p>App</p>
+        <a href="#/">Page 1</a> |
+        <a href="#/page2">Page 2</a> |
+        <a href="#/page3">Page 3</a> |
+        <a href="#/inicio">Inicio</a> |
+        <a href="#/proyectos">Proyectos</a> |
+        <a href="#/talento">Talento</a> |
+        <a href="#/agencia">Agencia</a> |
+        <a href="#/contacto">Contacto</a>
 
-    <select ng-change="update(language)" ng-model="language" ng-options="lang for lang in languages">
-      <option value="">-- language --</option>
-    </select>
+        <select ng-change="update(language)" ng-model="language" ng-options="lang for lang in languages">
+            <option value="">-- language --</option>
+        </select>
+    </nav>
+
+      <div class="bg"></div>
   </header>
 
     
@@ -44,13 +48,27 @@
         {{ 'footer.text'  | translate }}
     </footer>
 
-    <script src="./js/libs/greensock/TweenMax.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenMax.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/plugins/TextPlugin.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/3.2.0/imagesloaded.pkgd.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/plugins/ScrollToPlugin.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
+
+
+
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-animate.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-resource.min.js"></script>
     <script src="./js/libs/ng-translation-master/dist/ng-translation.min.js"></script>
+
+
+
     <script src="./js/app.js"></script>
     <script src="./js/directives/directives.js"></script>
     <script src="./js/controllers/mainController.js"></script>
