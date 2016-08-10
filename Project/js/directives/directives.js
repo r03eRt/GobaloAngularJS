@@ -28,9 +28,9 @@ app.directive('page1', function ($rootScope) {
         tl.add(TweenMax.from(id, .6, {rotationX: -90}));
         tl.add(TweenMax.from('#element1', .4, {x: 100, opacity: 0}));
         tl.add(TweenMax.from('#element2', .4, {x: 100, opacity: 0}));
-        tl.add(TweenMax.to('header', .8, {y:0, ease:Power4.easeInOut}));
-        tl.add(TweenMax.to('footer', .8, {y:0, ease:Power4.easeInOut}), '-=.8');
-        tl.add(TweenMax.to('main', .8, {y:0, ease:Power4.easeInOut}), '-=.8');
+        tl.add(TweenMax.to('header', .8, {y:0, autoAlpha:1, ease:Power4.easeInOut}));
+        tl.add(TweenMax.to('footer', .8, {y:0, autoAlpha:1, ease:Power4.easeInOut}), '-=.8');
+        tl.add(TweenMax.to('main', .8, {y:0, autoAlpha:1,  ease:Power4.easeInOut}), '-=.8');
         tl.add(TweenMax.set('body',{css:{className:'-=overflow-hidden'}}));
         tl.play();
 
@@ -39,12 +39,12 @@ app.directive('page1', function ($rootScope) {
     var hide = function (id, done) {
         var tl = new TimelineMax({onComplete: done});
         tl.add(TweenMax.set('body',{css:{className:'+=overflow-hidden'}}));
-        tl.add(TweenMax.to('header', .8, {y:'-=440', ease:Power4.easeInOut }));
-        tl.add(TweenMax.to('footer', .8, {y:'+=450', ease:Power4.easeInOut}), '-=.8');
-        tl.add(TweenMax.to('main', .8, {y:'+=450', ease:Power4.easeInOut}), '-=.8');
-        tl.add(TweenMax.to('#element2', .4, {x: 100, opacity: 0}));
-        tl.add(TweenMax.to('#element1', .4, {x: 100, opacity: 0}));
-        tl.add(TweenMax.to(id, .6, {rotationX: -90}));
+        tl.add(TweenMax.to('header', .8, {y:'-=440', autoAlpha:0, ease:Power4.easeInOut }));
+        tl.add(TweenMax.to('footer', .8, {y:'+=450', autoAlpha:0, ease:Power4.easeInOut}), '-=.8');
+        tl.add(TweenMax.to('main', .8, {y:'+=450', autoAlpha:0, ease:Power4.easeInOut}), '-=.8');
+        //tl.add(TweenMax.to('#element2', .4, {x: 100, opacity: 0}));
+        //tl.add(TweenMax.to('#element1', .4, {x: 100, opacity: 0}));
+        //tl.add(TweenMax.to(id, .6, {rotationX: -90}));
         tl.play();
     };
 
@@ -68,12 +68,12 @@ app.directive('page2', function ($rootScope) {
 
     var show = function (id, done) {
         var tl = new TimelineMax({onComplete: done});
-        tl.add(TweenMax.to('header', .8, {y:0, ease:Power4.easeInOut}));
-        tl.add(TweenMax.to('footer', .8, {y:0, ease:Power4.easeInOut}), '-=.8');
-        tl.add(TweenMax.to('main', .8, {y:0, ease:Power4.easeInOut}), '-=.8');
-        tl.add(TweenMax.from(id, .6, {rotationX: -90}));
-        tl.add(TweenMax.from('#element3', .4, {y: 100, opacity: 0}));
-        tl.add(TweenMax.from('#element4', .4, {y: 100, opacity: 0}));
+        tl.add(TweenMax.to('header', .8, {y:0, autoAlpha:1, ease:Power4.easeInOut}));
+        tl.add(TweenMax.to('footer', .8, {y:0, autoAlpha:1, ease:Power4.easeInOut}), '-=.8');
+        tl.add(TweenMax.to('main', .8, {y:0, autoAlpha:1,  ease:Power4.easeInOut}), '-=.8');
+        //tl.add(TweenMax.from(id, .6, {rotationX: -90}));
+        //tl.add(TweenMax.from('#element3', .4, {y: 100, opacity: 0}));
+        //tl.add(TweenMax.from('#element4', .4, {y: 100, opacity: 0}));
         tl.add(TweenMax.set('body',{css:{className:'-=overflow-hidden'}}));
         tl.play();
         
@@ -83,12 +83,12 @@ app.directive('page2', function ($rootScope) {
     	
         var tl = new TimelineMax({onComplete: done});
         tl.add(TweenMax.set('body',{css:{className:'+=overflow-hidden'}}));
-        tl.add(TweenMax.to('#element4', .4, {y: 100, opacity: 0}));
-        tl.add(TweenMax.to('#element3', .4, {y: 100, opacity: 0}));
-        tl.add(TweenMax.to(id, .6, {rotationX: -90}));
-        tl.add(TweenMax.to('header', .8, {y:'-=440', ease:Power4.easeInOut}));
-        tl.add(TweenMax.to('footer', .8, {y:'+=450', ease:Power4.easeInOut}), '-=.8');
-        tl.add(TweenMax.to('main', .8, {y:'+=450', ease:Power4.easeInOut}), '-=.8');
+        //tl.add(TweenMax.to('#element4', .4, {y: 100, opacity: 0}));
+        //tl.add(TweenMax.to('#element3', .4, {y: 100, opacity: 0}));
+        //tl.add(TweenMax.to(id, .6, {rotationX: -90}));
+        tl.add(TweenMax.to('header', .8, {y:'-=440', autoAlpha:0, ease:Power4.easeInOut}));
+        tl.add(TweenMax.to('footer', .8, {y:'+=450', autoAlpha:0, ease:Power4.easeInOut}), '-=.8');
+        tl.add(TweenMax.to('main', .8, {y:'+=450', autoAlpha:0, ease:Power4.easeInOut}), '-=.8');
         tl.play();
     };
 
@@ -114,12 +114,12 @@ app.directive('page3', function ($rootScope) {
     var show = function (id, done) {
         var tl = new TimelineMax({onComplete: done});
 
-        tl.add(TweenMax.from(id, .6, {rotationX: 90, rotationY: 90}));
-        tl.add(TweenMax.from('#element5', .4, {x: 100, rotationY: -90, opacity: 0}));
-        tl.add(TweenMax.from('#element6', .4, {x: 100, rotationX: -90, opacity: 0}));
-        tl.add(TweenMax.to('header', .8, {y:0, ease:Power4.easeInOut}));
-        tl.add(TweenMax.to('footer', .8, {y:0, ease:Power4.easeInOut}), '-=.8');
-        tl.add(TweenMax.to('main', .8, {y:0, ease:Power4.easeInOut}), '-=.8');
+        //tl.add(TweenMax.from(id, .6, {rotationX: 90, rotationY: 90}));
+        //tl.add(TweenMax.from('#element5', .4, {x: 100, rotationY: -90, opacity: 0}));
+        //tl.add(TweenMax.from('#element6', .4, {x: 100, rotationX: -90, opacity: 0}));
+        tl.add(TweenMax.to('header', .8, {y:0, autoAlpha:1, ease:Power4.easeInOut}));
+        tl.add(TweenMax.to('footer', .8, {y:0, autoAlpha:1, ease:Power4.easeInOut}), '-=.8');
+        tl.add(TweenMax.to('main', .8, {y:0, autoAlpha:1, ease:Power4.easeInOut}), '-=.8');
         tl.add(TweenMax.set('body',{css:{className:'-=overflow-hidden'}}));
         tl.play();
     };
@@ -127,12 +127,12 @@ app.directive('page3', function ($rootScope) {
     var hide = function (id, done) {
         var tl = new TimelineMax({onComplete: done});
         tl.add(TweenMax.set('body',{css:{className:'+=overflow-hidden'}}));
-        tl.add(TweenMax.to('header', .8, {y:'-=440', ease:Power4.easeInOut}));
-        tl.add(TweenMax.to('footer', .8, {y:'+=450', ease:Power4.easeInOut}), '-=.8');
-        tl.add(TweenMax.to('main', .8, {y:'-=440', ease:Power4.easeInOut}), '-=.8');
-        tl.add(TweenMax.to('#element6', .4, {x: 150, rotationX: 90, opacity: 0}));
-        tl.add(TweenMax.to('#element5', .4, {x: 150, rotationY: 90, opacity: 0}));
-        tl.add(TweenMax.to(id, .6, {rotationX: -90, rotationY: -90}));
+        tl.add(TweenMax.to('header', .8, {y:'-=440', autoAlpha:0, ease:Power4.easeInOut}));
+        tl.add(TweenMax.to('footer', .8, {y:'+=450', autoAlpha:0, ease:Power4.easeInOut}), '-=.8');
+        tl.add(TweenMax.to('main', .8, {y:'-=440', autoAlpha:0, ease:Power4.easeInOut}), '-=.8');
+        //tl.add(TweenMax.to('#element6', .4, {x: 150, rotationX: 90, opacity: 0}));
+        //tl.add(TweenMax.to('#element5', .4, {x: 150, rotationY: 90, opacity: 0}));
+        //tl.add(TweenMax.to(id, .6, {rotationX: -90, rotationY: -90}));
         tl.play();
     };
 
