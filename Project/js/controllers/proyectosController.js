@@ -22,6 +22,26 @@ app.controller('ProyectosCtrl', function ($scope, $rootScope) {
             })
 
             .addTo($scope.controller);
+        
+
+        
+        $scope.proyectList = [
+            '#proyect1', '#proyect2', '#proyect3', '#proyect4', '#proyect5',
+            '#proyect6', '#proyect7', '#proyect8', '#proyect9', '#proyect10',
+            '#proyect11', '#proyect12'];
+        
+        $scope.proyectList.forEach(function (proyect, index) {
+            var num = index +1;
+
+            $scope.proyectScene = new ScrollMagic.Scene({
+                triggerElement: proyect,
+                offset: -150
+            })
+                .setClassToggle("#proyect"+num, "active")
+                .addTo($scope.controller);
+        });
+
+
     };
 
 
@@ -30,6 +50,7 @@ app.controller('ProyectosCtrl', function ($scope, $rootScope) {
         //var anyThing = args.any;
         // do what you want to do
         $scope.scrollscene.destroy();
+        $scope.proyectScene.destroy();
         console.log("destruyo");
     });
 

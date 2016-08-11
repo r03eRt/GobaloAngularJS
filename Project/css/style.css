@@ -128,7 +128,7 @@ footer{
 }
 
 #page1 {
-    background: red;
+    background: whitesmoke;
 }
 
 #page2 {
@@ -162,4 +162,19 @@ header{
 nav{
     position: relative;
     z-index: 2;
+}
+
+.proyect{
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(50px);
+    transition: all 0.5s ease-in-out;
+}
+
+.proyect.active{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px);
+    transition: all 0.5s ease-in-out;
+
 }
