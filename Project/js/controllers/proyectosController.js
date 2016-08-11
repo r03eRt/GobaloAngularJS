@@ -11,6 +11,12 @@ app.controller('ProyectosCtrl', function ($scope, $rootScope) {
             .to($('header'), 0.7, { ease:Power0.easeNone}, '-=1.4');
 
 
+        $scope.introTl2 = new TimelineMax();
+
+        $scope.introTl2
+            .to($('header h1'), 1.4, {y: '400%', ease:Power1.easeOut}, '-=0.2')
+            .to($('header'), 0.7, { ease:Power0.easeNone}, '-=1.4');
+
         $scope.scrollscene = new ScrollMagic.Scene({
             triggerElement: 'header',
             triggerHook: 0,
@@ -21,6 +27,15 @@ app.controller('ProyectosCtrl', function ($scope, $rootScope) {
                 console.log("triger");
             })
 
+            .addTo($scope.controller);
+
+
+        $scope.titleScene = new ScrollMagic.Scene({
+            triggerElement: 'header',
+            triggerHook: 0,
+            duration: "100%"
+        })
+            .setTween($scope.introTl2)
             .addTo($scope.controller);
         
 
@@ -51,6 +66,7 @@ app.controller('ProyectosCtrl', function ($scope, $rootScope) {
         // do what you want to do
         $scope.scrollscene.destroy();
         $scope.proyectScene.destroy();
+        $scope.titleScene.destroy();
         console.log("destruyo");
     });
 

@@ -167,14 +167,62 @@ nav{
 .proyect{
     opacity: 0;
     visibility: hidden;
-    transform: translateY(50px);
+    transform: translate3d(0,50px,0);
     transition: all 0.5s ease-in-out;
 }
+
+.proyect>h2{
+    opacity: 0;
+    visibility: hidden;
+    transform: translate3d(0,20px,0);
+    transition: all 0.2s ease-in;
+    transition-delay: 0.5s;
+}
+
+.proyect>p{
+    opacity: 0;
+    visibility: hidden;
+    transform: translate3d(0,10px,0);
+    transition: all 0.2s ease-in;
+    transition-delay: 0.7s;
+}
+
 
 .proyect.active{
     opacity: 1;
     visibility: visible;
-    transform: translateY(0px);
+    transform: translate3d(0,0,0);
     transition: all 0.5s ease-in-out;
 
+}
+
+
+.proyect.active>h2{
+    opacity: 1;
+    visibility: visible;
+    transform: translate3d(0,0,0);
+    transition: all 0.6s ease-in-out;
+    transition-delay: 0.5s;
+}
+
+.proyect.active>p{
+    opacity: 1;
+    visibility: visible;
+    transform: translate3d(0,0,0);
+    transition: all 0.6s ease-in-out;
+    transition-delay: 0.8s;
+}
+
+h1{
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    /* top: 0; */
+    /* bottom: 0; */
+    text-align: center;
+    top: 40%;
+    -webkit-transform: translateY(-40%);
+    -ms-transform: translateY(-40%);
+    transform: translateY(-40%);
 }
