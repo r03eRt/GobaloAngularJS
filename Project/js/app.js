@@ -36,6 +36,7 @@ var resolve = {
     var deferred = $q.defer();
 
     var stopListening = $rootScope.$on('changeRoute', function (event) {
+
       event.stopPropagation();
       deferred.resolve('delay');
       stopListening();
@@ -44,6 +45,10 @@ var resolve = {
     return deferred.promise;
   }
 };
+
+
+
+
 
 //
 // Routes

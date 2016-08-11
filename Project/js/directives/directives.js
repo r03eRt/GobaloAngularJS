@@ -11,7 +11,9 @@ app.directive('stage', function ($rootScope, $timeout) {
 
             scope.$on('$locationChangeStart', function (event, next, current) {
                 scope.$broadcast('hide');
+                scope.$broadcast('print');
             });
+            
         }
     }
 })
@@ -23,8 +25,7 @@ app.directive('page1', function ($rootScope) {
 
     var show = function (id, done) {
     	
-        var tl = new TimelineMax({onComplete: done});
-
+        var tl = new TimelineMax({onComplete: done2});
         tl.add(TweenMax.from(id, .6, {rotationX: -90}));
         tl.add(TweenMax.from('#element1', .4, {x: 100, opacity: 0}));
         tl.add(TweenMax.from('#element2', .4, {x: 100, opacity: 0}));
@@ -46,13 +47,21 @@ app.directive('page1', function ($rootScope) {
         //tl.add(TweenMax.to('#element1', .4, {x: 100, opacity: 0}));
         //tl.add(TweenMax.to(id, .6, {rotationX: -90}));
         tl.play();
+
+
     };
+
+    function done2 () {
+        $rootScope.initScrollMagic();
+    };
+
 
     return {
         restrict: 'A',
         link: function (scope, element) {
 
             show(element);
+
             scope.$on('hide', function (event, next, current) {
                 hide(element, function () {
                     scope.$emit('changeRoute');
@@ -67,7 +76,7 @@ app.directive('page1', function ($rootScope) {
 app.directive('page2', function ($rootScope) {
 
     var show = function (id, done) {
-        var tl = new TimelineMax({onComplete: done});
+        var tl = new TimelineMax({onComplete: done2});
         tl.add(TweenMax.to('header', .8, {y:0, autoAlpha:1, ease:Power4.easeInOut}));
         tl.add(TweenMax.to('footer', .8, {y:0, autoAlpha:1, ease:Power4.easeInOut}), '-=.8');
         tl.add(TweenMax.to('main', .8, {y:0, autoAlpha:1,  ease:Power4.easeInOut}), '-=.8');
@@ -76,7 +85,7 @@ app.directive('page2', function ($rootScope) {
         //tl.add(TweenMax.from('#element4', .4, {y: 100, opacity: 0}));
         tl.add(TweenMax.set('body',{css:{className:'-=overflow-hidden'}}));
         tl.play();
-        
+
     };
 
     var hide = function (id, done) {
@@ -90,7 +99,14 @@ app.directive('page2', function ($rootScope) {
         tl.add(TweenMax.to('footer', .8, {y:'+=450', autoAlpha:0, ease:Power4.easeInOut}), '-=.8');
         tl.add(TweenMax.to('main', .8, {y:'+=450', autoAlpha:0, ease:Power4.easeInOut}), '-=.8');
         tl.play();
+
     };
+
+
+    function done2 () {
+        $rootScope.initScrollMagic();
+    };
+
 
     return {
         restrict: 'A',
@@ -112,7 +128,7 @@ app.directive('page2', function ($rootScope) {
 app.directive('page3', function ($rootScope) {
 
     var show = function (id, done) {
-        var tl = new TimelineMax({onComplete: done});
+        var tl = new TimelineMax({onComplete: done2});
 
         //tl.add(TweenMax.from(id, .6, {rotationX: 90, rotationY: 90}));
         //tl.add(TweenMax.from('#element5', .4, {x: 100, rotationY: -90, opacity: 0}));
@@ -134,7 +150,13 @@ app.directive('page3', function ($rootScope) {
         //tl.add(TweenMax.to('#element5', .4, {x: 150, rotationY: 90, opacity: 0}));
         //tl.add(TweenMax.to(id, .6, {rotationX: -90, rotationY: -90}));
         tl.play();
+
     };
+
+    function done2 () {
+        $rootScope.initScrollMagic();
+    };
+
 
     return {
         restrict: 'A',
