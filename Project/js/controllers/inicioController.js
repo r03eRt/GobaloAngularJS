@@ -2,33 +2,30 @@ app.controller('InicioCtrl', function ($scope, $rootScope) {
     $rootScope.currentPage = 'inicio';
 
 
-    console.log('creo inicio');
+    $rootScope.initScrollMagic = function () {
+        console.log('creo 2');
+        $scope.controller = new ScrollMagic.Controller();
+        $scope.introTl = new TimelineMax();
+
+        $scope.introTl
+            .to($('header .bg'), 1.4, {y: '50%', ease:Power1.easeOut}, '-=0.2')
+            .to($('header'), 0.7, { ease:Power0.easeNone}, '-=1.4');
 
 
-    var controller = new ScrollMagic.Controller();
-    var introTl = new TimelineMax();
-
-    introTl
-        .to($('header .bg'), 1.4, {y: '50%', ease:Power1.easeOut}, '-=0.2')
-        .to($('header'), 0.7, { ease:Power0.easeNone}, '-=1.4');
-
-
-    var scrollscene = new ScrollMagic.Scene({
-        triggerElement: 'header',
-        triggerHook: 0,
-        duration: "100%"
-    })
-        .setTween(introTl)
-        .on("enter", function () {
-            console.log("triger");
+        $scope.scrollscene = new ScrollMagic.Scene({
+            triggerElement: 'header',
+            triggerHook: 0,
+            duration: "100%"
         })
+            .setTween($scope.introTl)
+            .on("enter", function () {
+                console.log("triger");
+            })
 
-        .addTo(controller);
+            .addTo($scope.controller);
+    };
 
-    $scope.kill = function () {
-        console.log('destroy');
-        scrollscene.destroy();
-    }
+
 
 
 
@@ -36,10 +33,9 @@ app.controller('InicioCtrl', function ($scope, $rootScope) {
 
         //var anyThing = args.any;
         // do what you want to do
-        scrollscene.destroy();
+        $scope.scrollscene.destroy();
         console.log("destruyo");
     });
-
 
 
     $scope.$on('creo', function(event, args) {
@@ -47,7 +43,6 @@ app.controller('InicioCtrl', function ($scope, $rootScope) {
         // do what you want to do
         console.log("creo");
     });
-    
     
     
     
