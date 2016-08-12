@@ -18,4 +18,6 @@ app.controller('MainCtrl',['$scope', '$rootScope','$timeout', 'ngTranslation', f
     };
 
 
+
+
 }]);

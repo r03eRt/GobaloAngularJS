@@ -2,6 +2,23 @@ app.controller('InicioCtrl', function ($scope, $rootScope) {
     $rootScope.currentPage = 'inicio';
 
 
+    var container1 = $("#container-1");
+    container1.load("img/svg/figura1.svg", $scope.starAnimation);
+    
+    $scope.startAnimation = function() {
+        TweenLite.to('#rect2', 1, {x: '+=50', ease: Power4.easeInOut});
+        console.log("init");
+    };
+
+    $scope.stopAnimation = function() {
+        TweenLite.to('#rect2', 1, {x: '-=50', ease: Power4.easeInOut});
+    }
+
+
+
+
+
+
     $rootScope.initScrollMagic = function () {
         console.log('creo 2');
         $scope.controller = new ScrollMagic.Controller();
@@ -23,7 +40,15 @@ app.controller('InicioCtrl', function ($scope, $rootScope) {
             })
 
             .addTo($scope.controller);
+
+
     };
+
+
+
+
+
+
 
 
 

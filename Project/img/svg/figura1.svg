@@ -1,0 +1,14 @@
+
+<svg id ="figura1" version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 322 178" style="enable-background:new 0 0 322 178;" xml:space="preserve">
+	<style type="text/css">
+		.st0{fill:#FFFFFF;stroke:#FFFFFF;stroke-miterlimit:10;}
+		.st1{fill:#FBBE2C;stroke:#FBBE2C;stroke-miterlimit:10;}
+	</style>
+	<g id="rect">
+		<rect x="145" y="3" class="st0" width="170" height="170"/>
+	</g>
+	<g id="rect2">
+		<rect x="89" y="88" class="st1" width="170" height="15"/>
+	</g>
+</svg>
