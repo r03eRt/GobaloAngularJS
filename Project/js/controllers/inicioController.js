@@ -4,14 +4,14 @@ app.controller('InicioCtrl', function ($scope, $rootScope) {
 
     var container1 = $("#container-1");
     container1.load("img/svg/figura1.svg", $scope.starAnimation);
-    
+
     $scope.startAnimation = function() {
-        TweenLite.to('#rect2', 1, {x: '+=50', ease: Power4.easeInOut});
+        TweenLite.to('#rect2', 1, {x: '-=25', ease: Power4.easeInOut});
         console.log("init");
     };
 
     $scope.stopAnimation = function() {
-        TweenLite.to('#rect2', 1, {x: '-=50', ease: Power4.easeInOut});
+        TweenLite.to('#rect2', 1, {x: '+=25', ease: Power4.easeInOut});
     }
 
 
